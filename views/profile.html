@@ -44,15 +44,29 @@
     </ul>
 
     <div class="submitComment">
-      <h2>Like this groomer too?</h2>
+      <div class="askForComment"><h2>Like this groomer too?</h2>
       <button class="commentBtn">Add a Review!</button>
+      </div>
       <form class="submitCommentForm">
         <input type="text" name="userName" placeholder="Full Name" id="userName">
-        <input type="text" name="userComment" placeholder="Write your review here" id="userComment">
+        <input type="text" name="userComment" placeholder="Write your review here" id="userComment" class="reviewInput">
       </form>
+
     </div>
 
   </div>
   </Section>
-  
 </body>
+  <script>
+    var commentForm = document.querySelector(".submitCommentForm"); 
+    var commentBtn = document.querySelector(".commentBtn");
+    var askForComment = document.querySelector(".askForComment")
+  commentBtn.addEventListener("click", showCommentForm);
+
+  function showCommentForm() {
+  askForComment.style.display = "none";
+  commentForm.style.display = "block";
+
+  };
+  </script>
+</html>
