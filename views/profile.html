@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../Public/css/styles.css">
   <title>BarkBook | Profile</title>
 </head>
-<body class="profileGradient">
+<body class="loginGradient">
   <nav>
     <button class="homeBtn">BarkBook.</button>
     <button class="logoutBtn">Log Out</button>
@@ -50,10 +50,9 @@
       <form class="submitCommentForm">
         <input type="text" name="userName" placeholder="Full Name" id="userName">
         <input type="text" name="userComment" placeholder="Write your review here" id="userComment" class="reviewInput">
+        <button>submit</button>
       </form>
-
     </div>
-
   </div>
   </Section>
 </body>
@@ -61,7 +60,7 @@
     var commentForm = document.querySelector(".submitCommentForm"); 
     var commentBtn = document.querySelector(".commentBtn");
     var askForComment = document.querySelector(".askForComment")
-  commentBtn.addEventListener("click", showCommentForm);
+    commentBtn.addEventListener("click", showCommentForm);
 
   function showCommentForm() {
   askForComment.style.display = "none";
